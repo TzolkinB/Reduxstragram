@@ -13,7 +13,7 @@ const Single = React.createClass({
 		return(
 			<div className="single-photo">
 				<Photo index={index} post={post} {...this.props} />
-				<Comments postComments={postComments} />
+				<Comments postComments={postComments} {...this.props} /> {/* spread operator passes all props from this component down to comments component*/}
 			</div>
 		)
 	}
